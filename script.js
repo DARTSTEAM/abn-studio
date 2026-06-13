@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         uniform float u_time;
         uniform vec2 u_resolution;
-        uniform vec2 u_mouse;
 
         /* ---- noise helpers ---- */
         float hash(vec2 p) {
@@ -114,11 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
           float vig = 1.0 - 0.35 * pow(length(uv - vec2(0.45, 0.45)) * 1.2, 2.0);
           col *= max(vig, 0.0);
 
-          /* ---- subtle mouse interaction ---- */
-          vec2 m = u_mouse;
-          m.x *= aspect;
-          float mouseDist = length(p - m);
-          col += vec3(0.08, 0.03, 0.01) * smoothstep(0.5, 0.0, mouseDist);
+
 
           /* ---- gamma correction ---- */
           col = pow(col, vec3(0.92));
@@ -167,18 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // --- Uniforms ---
       const uTime = gl.getUniformLocation(program, 'u_time');
       const uRes  = gl.getUniformLocation(program, 'u_resolution');
-      const uMouse = gl.getUniformLocation(program, 'u_mouse');
-
-      let mouseX = 0.5, mouseY = 0.5;
-
-      const hero = document.querySelector('.hero');
-      if (hero && window.matchMedia('(pointer: fine)').matches) {
-        hero.addEventListener('mousemove', (e) => {
-          const rect = hero.getBoundingClientRect();
-          mouseX = (e.clientX - rect.left) / rect.width;
-          mouseY = 1.0 - (e.clientY - rect.top) / rect.height;
-        });
-      }
 
       // --- Render loop ---
       const startTime = performance.now();
@@ -189,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resize();
         gl.uniform1f(uTime, elapsed);
         gl.uniform2f(uRes, canvas.width, canvas.height);
-        gl.uniform2f(uMouse, mouseX, mouseY);
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
         requestAnimationFrame(render);

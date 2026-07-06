@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Raw source media — heavy originals kept locally as source of truth.
+# The web-optimized, self-hosted versions live in assets/ and ARE committed.
+# (The 103MB Galicia master exceeds GitHub's 100MB hard limit and must not be pushed.)
+ABNxGalicia*.mp4
+ABNxCalm*.mp4
+Calm.png
+Galicia.png
+Galicia _ Caso.txt
+
+# Local test/scratch files
+_test-*.html

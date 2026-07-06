@@ -68,9 +68,53 @@
     <div class="container">
       <div class="section-label reveal">Selected Work</div>
 
+      <!-- Featured real cases -->
+      <div class="work-featured">
+
+        <!-- Case: Calm -->
+        <button class="case-card reveal reveal-d1" data-case="calm" type="button" aria-label="Open Calm case study">
+          <div class="case-card-media">
+            <img src="assets/calm-cover.jpg" alt="Calm — Hot Sale campaign" loading="lazy">
+          </div>
+          <div class="case-card-info">
+            <div class="case-card-row">
+              <span class="case-card-tag">Case · 2026</span>
+              <span class="case-card-view">View case
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+            <div class="case-card-title">
+              <h3 class="case-card-name">Calm</h3>
+              <span class="case-card-sub">Hot Sale — “Malas noches” campaign</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- Case: Galicia -->
+        <button class="case-card reveal reveal-d2" data-case="galicia" type="button" aria-label="Open Banco Galicia case study">
+          <div class="case-card-media">
+            <img src="assets/galicia-cover.jpg" alt="Banco Galicia — FIFA World Cup campaign" loading="lazy">
+          </div>
+          <div class="case-card-info">
+            <div class="case-card-row">
+              <span class="case-card-tag">Case · 2026</span>
+              <span class="case-card-view">View case
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+            <div class="case-card-title">
+              <h3 class="case-card-name">Banco Galicia</h3>
+              <span class="case-card-sub">FIFA World Cup — “Doble camiseta”</span>
+            </div>
+          </div>
+        </button>
+
+      </div>
+
+      <!-- More work -->
+      <div class="work-more-label reveal">More work</div>
       <div class="work-grid">
 
-        <!-- Card 1: Avatar KREA (user photo) -->
         <div class="work-card reveal reveal-d1">
           <div class="work-card-bg">
             <img src="assets/work-avatar-krea.png" alt="AI Avatar — KREA Design" loading="lazy">
@@ -81,29 +125,6 @@
           </div>
         </div>
 
-        <!-- Card 2: Silhouette glow (generated) -->
-        <div class="work-card reveal reveal-d2">
-          <div class="work-card-bg">
-            <img src="assets/portfolio-3.png" alt="Eclipse — AI Visual" loading="lazy">
-          </div>
-          <div class="work-card-overlay">
-            <h4 class="work-card-name">Eclipse</h4>
-            <span class="work-card-cat">AI Content</span>
-          </div>
-        </div>
-
-        <!-- Card 3: Glitch Green (user photo) -->
-        <div class="work-card reveal reveal-d1">
-          <div class="work-card-bg">
-            <img src="assets/work-glitch-green.png" alt="Frequency — Glitch Art" loading="lazy">
-          </div>
-          <div class="work-card-overlay">
-            <h4 class="work-card-name">Frequency</h4>
-            <span class="work-card-cat">Digital Media</span>
-          </div>
-        </div>
-
-        <!-- Card 4: Motion trails (generated) -->
         <div class="work-card reveal reveal-d2">
           <div class="work-card-bg">
             <img src="assets/portfolio-2.png" alt="Flux — Motion Design" loading="lazy">
@@ -114,7 +135,6 @@
           </div>
         </div>
 
-        <!-- Card 5: Blue profile (user photo) -->
         <div class="work-card reveal reveal-d1">
           <div class="work-card-bg">
             <img src="assets/work-blue-profile.png" alt="Clarity — Brand Visual" loading="lazy">
@@ -125,7 +145,6 @@
           </div>
         </div>
 
-        <!-- Card 6: Abstract 3D (generated) -->
         <div class="work-card reveal reveal-d2">
           <div class="work-card-bg">
             <img src="assets/portfolio-4.png" alt="Molten — 3D Visual" loading="lazy">
@@ -207,6 +226,149 @@
       <span class="footer-copy">© 2025 ABN Studio. All rights reserved.</span>
     </div>
   </footer>
+
+
+  <!-- ==================== CASE STUDIES (MODAL) ==================== -->
+  <div class="case-overlay" id="case-overlay" aria-hidden="true">
+    <div class="case-backdrop" data-close></div>
+
+    <div class="case-dialog" role="dialog" aria-modal="true" aria-labelledby="case-title-active">
+      <button class="case-close" data-close type="button" aria-label="Close case">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <!-- ---------- CALM ---------- -->
+      <article class="case-panel" data-panel="calm" hidden>
+        <header class="case-head">
+          <span class="case-eyebrow">2026 · Retail · Sleep &amp; Rest</span>
+          <h2 class="case-title" id="case-title-calm">Calm</h2>
+          <span class="case-service">Creative + High Visual AI · Campaign</span>
+        </header>
+
+        <div class="case-stage">
+          <div class="case-video-wrap">
+            <video class="case-video" playsinline muted loop preload="none"
+                   poster="assets/calm-todos-poster.jpg"
+                   data-default-src="assets/calm-todos.mp4"
+                   data-default-poster="assets/calm-todos-poster.jpg">
+              <source src="assets/calm-todos.mp4" type="video/mp4">
+            </video>
+            <button class="case-mute" type="button" aria-label="Unmute video">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+              <span class="case-mute-label">Sound</span>
+            </button>
+          </div>
+
+          <div class="case-gallery" aria-label="Campaign films">
+            <button class="case-thumb is-active" type="button" data-src="assets/calm-todos.mp4" data-poster="assets/calm-todos-poster.jpg">
+              <img src="assets/calm-todos-poster.jpg" alt="Calm — product reel" loading="lazy"><span>Reel</span>
+            </button>
+            <button class="case-thumb" type="button" data-src="assets/calm-autos.mp4" data-poster="assets/calm-autos-poster.jpg">
+              <img src="assets/calm-autos-poster.jpg" alt="Calm — Autos" loading="lazy"><span>Autos</span>
+            </button>
+            <button class="case-thumb" type="button" data-src="assets/calm-manana.mp4" data-poster="assets/calm-manana-poster.jpg">
+              <img src="assets/calm-manana-poster.jpg" alt="Calm — Mañana" loading="lazy"><span>Mañana</span>
+            </button>
+            <button class="case-thumb" type="button" data-src="assets/calm-oficina.mp4" data-poster="assets/calm-oficina-poster.jpg">
+              <img src="assets/calm-oficina-poster.jpg" alt="Calm — Oficina" loading="lazy"><span>Oficina</span>
+            </button>
+            <button class="case-thumb" type="button" data-src="assets/calm-papi-futbol.mp4" data-poster="assets/calm-papi-futbol-poster.jpg">
+              <img src="assets/calm-papi-futbol-poster.jpg" alt="Calm — Papi Fútbol" loading="lazy"><span>Papi Fútbol</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-narrative">
+            <div class="case-block">
+              <span class="case-block-label">The challenge</span>
+              <p>Hot Sale is the loudest week of the Argentine retail calendar — every brand screaming the same discounts into the same feed. Calm needed to cut through without simply shouting a bigger percentage off, and turn a mattress sale into something people actually wanted to watch and share.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label">The idea</span>
+              <p>We started from a universal truth: a bad night's sleep makes you short-tempered — the kind of day where anything sets you off. So we built the campaign around the split-second before you lose it, and swapped the Argentine swear word for the thing that would have prevented it: Calm. <em>“Almohada”, “Colchón”, “Espuma”, “Cama”</em> land exactly where the insult was meant to go. Four films — road rage (<em>Autos</em>), a rough morning (<em>Mañana</em>), the office (<em>Oficina</em>) and Tuesday-night football (<em>Papi Fútbol</em>) — plus a product reel, all in the visual language of the clips people already screenshot and forward.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label">The result</span>
+              <p>Produced with a hybrid-intelligence system — human comedic timing and casting judgment paired with AI-first execution. Five films delivered without a single shoot day, ready in time for Hot Sale.</p>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric"><span class="metric-num">−75%</span><span class="metric-label">Production cost</span></div>
+            <div class="metric"><span class="metric-num">−70%</span><span class="metric-label">Production time</span></div>
+            <div class="metric"><span class="metric-num">5</span><span class="metric-label">Films in 6 business days</span></div>
+            <div class="metric"><span class="metric-num">0</span><span class="metric-label">Shoot days</span></div>
+          </div>
+
+          <div class="case-tools">
+            <span class="case-block-label">Tools</span>
+            <div class="case-tool-list">
+              <span>Higgsfield</span><span>Nano Banana</span><span>Veo 3</span><span>Kling Motion</span><span>Seedance</span><span>Suno</span><span>Claude</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- GALICIA ---------- -->
+      <article class="case-panel" data-panel="galicia" hidden>
+        <header class="case-head">
+          <span class="case-eyebrow">2026 · Finance · Banking</span>
+          <h2 class="case-title" id="case-title-galicia">Banco Galicia</h2>
+          <span class="case-service">Creative + High Visual AI · Campaign</span>
+        </header>
+
+        <div class="case-stage">
+          <div class="case-video-wrap">
+            <video class="case-video" playsinline muted loop preload="none"
+                   poster="assets/galicia-cover.jpg"
+                   data-default-src="assets/galicia.mp4"
+                   data-default-poster="assets/galicia-cover.jpg">
+              <source src="assets/galicia.mp4" type="video/mp4">
+            </video>
+            <button class="case-mute" type="button" aria-label="Unmute video">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+              <span class="case-mute-label">Sound</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-narrative">
+            <div class="case-block">
+              <span class="case-block-label">The challenge</span>
+              <p>June 2026: the FIFA World Cup kicks off in the United States — the most-watched event on earth, and for a football nation like Argentina, far more than a tournament. Galicia wanted to own the cultural conversation at its most saturated moment, surrounded by competitors, through guerrilla marketing — <em>without</em> sponsoring AFA or the national team, without World Cup promos or discounts, and without raffling trips to the US. And it had to be conceived, developed and executed in under 14 days.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label">The idea</span>
+              <p>At a moment of peak national pride, we leaned on one absolute truth: Galicia is the only truly Argentine bank — the only one that operates exclusively inside the country. From there we built <em>“Doble camiseta”</em>: a distinctly Argentine way of unmasking the banks that keep a plan B and operate abroad, positioning Galicia as the one that only celebrates when Argentina wins. To carry it, we recreated an iconic scene from the classic film <em>“Nueve Reinas”</em>, shot-for-shot, rewriting the script around the concept.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label">The result</span>
+              <p>Insight, script and concept validated, the film was produced with a hybrid-intelligence system — human judgment paired with AI-first execution — crafted for hyperrealism, with a human voice-over carrying the emotional weight.</p>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric"><span class="metric-num">−80%</span><span class="metric-label">Production cost</span></div>
+            <div class="metric"><span class="metric-num">−75%</span><span class="metric-label">Production time</span></div>
+            <div class="metric"><span class="metric-num">5</span><span class="metric-label">Business days to delivery</span></div>
+            <div class="metric"><span class="metric-num">&lt;14</span><span class="metric-label">Days concept to launch</span></div>
+          </div>
+
+          <div class="case-tools">
+            <span class="case-block-label">Tools</span>
+            <div class="case-tool-list">
+              <span>Higgsfield</span><span>Nano Banana</span><span>Veo 3</span><span>Omni</span><span>Claude</span><span>Seedance</span><span>Kling Motion</span><span>Suno</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
 
 
   <!-- Scripts -->

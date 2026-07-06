@@ -273,4 +273,129 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  /* ========================================
+     CASE STUDY MODAL
+     ======================================== */
+  const overlay = document.getElementById('case-overlay');
+
+  if (overlay) {
+    const dialog = overlay.querySelector('.case-dialog');
+    const panels = overlay.querySelectorAll('.case-panel');
+    let lastFocused = null;
+
+    const activePanel = () =>
+      [...panels].find(p => !p.hidden) || null;
+
+    const tryPlay = (video) => {
+      if (!video) return;
+      const p = video.play();
+      if (p && p.catch) p.catch(() => {});
+    };
+
+    // Point a video at a new clip, preserving current mute state
+    function setSource(video, src, poster) {
+      if (!video) return;
+      const wasMuted = video.muted;
+      if (poster) video.setAttribute('poster', poster);
+      const source = video.querySelector('source');
+      if (source) source.setAttribute('src', src);
+      video.load();
+      video.muted = wasMuted;
+      tryPlay(video);
+    }
+
+    function syncMuteButton(panel) {
+      const btn = panel.querySelector('.case-mute');
+      const video = panel.querySelector('.case-video');
+      if (!btn || !video) return;
+      const label = btn.querySelector('.case-mute-label');
+      if (video.muted) {
+        btn.classList.remove('is-unmuted');
+        btn.setAttribute('aria-label', 'Unmute video');
+        if (label) label.textContent = 'Sound';
+      } else {
+        btn.classList.add('is-unmuted');
+        btn.setAttribute('aria-label', 'Mute video');
+        if (label) label.textContent = 'Mute';
+      }
+    }
+
+    function openCase(name) {
+      const panel = overlay.querySelector(`.case-panel[data-panel="${name}"]`);
+      if (!panel) return;
+      lastFocused = document.activeElement;
+
+      panels.forEach(p => { p.hidden = (p !== panel); });
+
+      const video = panel.querySelector('.case-video');
+      if (video) {
+        video.muted = true;
+        setSource(video, video.getAttribute('data-default-src'), video.getAttribute('data-default-poster'));
+      }
+      // reset gallery selection to first thumb
+      panel.querySelectorAll('.case-thumb').forEach((t, i) =>
+        t.classList.toggle('is-active', i === 0));
+
+      syncMuteButton(panel);
+
+      const title = panel.querySelector('.case-title');
+      if (dialog && title) dialog.setAttribute('aria-labelledby', title.id);
+
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('case-open');
+      overlay.scrollTop = 0;
+
+      const closeBtn = overlay.querySelector('.case-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeCase() {
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('case-open');
+      overlay.querySelectorAll('.case-video').forEach(v => {
+        v.pause();
+        v.muted = true;
+      });
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    }
+
+    // Open from cards
+    document.querySelectorAll('.case-card').forEach(card => {
+      card.addEventListener('click', () => openCase(card.getAttribute('data-case')));
+    });
+
+    // Close triggers
+    overlay.querySelectorAll('[data-close]').forEach(el => {
+      el.addEventListener('click', closeCase);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) closeCase();
+    });
+
+    // Mute toggle + gallery swap (delegated per panel)
+    panels.forEach(panel => {
+      const video = panel.querySelector('.case-video');
+
+      const muteBtn = panel.querySelector('.case-mute');
+      if (muteBtn && video) {
+        muteBtn.addEventListener('click', () => {
+          video.muted = !video.muted;
+          if (!video.muted) tryPlay(video);
+          syncMuteButton(panel);
+        });
+      }
+
+      panel.querySelectorAll('.case-thumb').forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          panel.querySelectorAll('.case-thumb').forEach(t => t.classList.remove('is-active'));
+          thumb.classList.add('is-active');
+          setSource(video, thumb.getAttribute('data-src'), thumb.getAttribute('data-poster'));
+        });
+      });
+    });
+  }
+
 });

@@ -549,6 +549,13 @@ body::after {
   -webkit-backdrop-filter: blur(6px);
 }
 
+.case-card-logo {
+  height: 28px;
+  width: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+}
+
 .case-card-view {
   display: inline-flex;
   align-items: center;
@@ -703,6 +710,14 @@ body.case-open {
 .case-head {
   margin-bottom: 30px;
   padding-right: 40px;
+}
+
+.case-logo {
+  height: 34px;
+  width: auto;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  display: block;
 }
 
 .case-eyebrow {

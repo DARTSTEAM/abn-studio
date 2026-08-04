@@ -1012,8 +1012,28 @@ body.case-open {
   transform-origin: left;
 }
 
+.contact-extra {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+.contact-extra a {
+  color: var(--ash-mid);
+  transition: color 0.3s ease;
+}
+
+.contact-extra a:hover { color: var(--orange); }
+.contact-dot { color: var(--ash-dim); }
+
 .contact-social {
-  margin-top: 48px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 10px;

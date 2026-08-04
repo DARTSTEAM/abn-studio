@@ -398,4 +398,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  /* ========================================
+     CASES — HORIZONTAL SCROLLER (arrows)
+     ======================================== */
+  const casesTrack = document.getElementById('cases-track');
+  if (casesTrack) {
+    const prevBtn = document.querySelector('.cases-arrow-prev');
+    const nextBtn = document.querySelector('.cases-arrow-next');
+
+    const stepSize = () => {
+      const card = casesTrack.querySelector('.case-card');
+      return card ? card.getBoundingClientRect().width + 20 : casesTrack.clientWidth * 0.8;
+    };
+
+    const updateArrows = () => {
+      const maxScroll = casesTrack.scrollWidth - casesTrack.clientWidth - 2;
+      if (prevBtn) prevBtn.disabled = casesTrack.scrollLeft <= 2;
+      if (nextBtn) nextBtn.disabled = casesTrack.scrollLeft >= maxScroll;
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', () =>
+      casesTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' }));
+    if (nextBtn) nextBtn.addEventListener('click', () =>
+      casesTrack.scrollBy({ left: stepSize(), behavior: 'smooth' }));
+
+    casesTrack.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+  }
+
 });

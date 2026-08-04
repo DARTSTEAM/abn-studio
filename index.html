@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <title>ABN Studio — AI-Powered Visual Studio</title>
-  <meta name="description" content="ABN Studio crafts next-generation visual content powered by artificial intelligence. Motion, video, UGC avatars, and digital media for brands that move.">
-  <meta name="keywords" content="AI content creation, motion design, video production, UGC avatars, digital media, creative studio, Higgsfield">
+  <title>ABN Studio — AI Film Studio · Creative AI · Producción</title>
+  <meta name="description" content="ABN Studio crea contenido visual hiperrealista potenciado por inteligencia artificial. AI Film Studio, Creative AI y Producción para marcas que se mueven.">
+  <meta name="keywords" content="AI Film Studio, Creative AI, producción audiovisual, contenido IA, hiperrealismo, estudio creativo, ABN Studio">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ABN Studio — AI-Powered Visual Studio">
-  <meta property="og:description" content="Next-generation visual content powered by AI.">
+  <meta property="og:title" content="ABN Studio — AI Film Studio · Creative AI · Producción">
+  <meta property="og:description" content="Contenido visual hiperrealista potenciado por IA.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/portfolio-1.png">
+  <meta property="og:image" content="assets/galicia-cover.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="logo-dark.svg">
@@ -35,9 +35,13 @@
       <img src="logo-white.svg" alt="ABN Studio">
     </a>
     <div class="nav-links">
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#services" class="nav-link">Services</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#casos" class="nav-link"><span lang="es">Casos</span><span lang="en">Work</span></a>
+      <a href="#servicios" class="nav-link"><span lang="es">Servicios</span><span lang="en">Services</span></a>
+      <a href="#contacto" class="nav-link"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+      <button class="lang-switch" id="lang-switch" type="button" aria-label="Change language / Cambiar idioma">
+        <span class="ls-to-en">🇬🇧 EN</span>
+        <span class="ls-to-es">🇦🇷 ES</span>
+      </button>
     </div>
   </nav>
 
@@ -48,7 +52,10 @@
 
     <div class="hero-content">
       <img src="logo-white.svg" alt="ABN Studio" class="hero-logo">
-      <p class="hero-tagline">AI-Powered Visual Studio</p>
+      <p class="hero-tagline">
+        <span lang="es">Estudio visual potenciado por IA</span>
+        <span lang="en">AI-Powered Visual Studio</span>
+      </p>
     </div>
 
     <div class="hero-scroll">
@@ -56,139 +63,204 @@
     </div>
 
     <div class="hero-bottom">
-      <span class="hero-bottom-left">AI Content · Motion · Avatars · Digital Media</span>
-      <span class="hero-bottom-center">Silence · Depth · Presence</span>
-      <span class="hero-bottom-right">2025</span>
+      <span class="hero-bottom-left">Creative AI · AI Film Studio · Producción</span>
+      <span class="hero-bottom-center">
+        <span lang="es">Silencio · Profundidad · Presencia</span>
+        <span lang="en">Silence · Depth · Presence</span>
+      </span>
+      <span class="hero-bottom-right">2026</span>
     </div>
   </section>
 
 
-  <!-- ==================== SELECTED WORK ==================== -->
-  <section class="work" id="work">
+  <!-- ==================== TRUSTED BY (MARQUEE) ==================== -->
+  <section class="brands" id="brands">
+    <div class="brands-head">
+      <span class="brands-label">
+        <span lang="es">Confían en nosotros</span>
+        <span lang="en">Trusted by</span>
+      </span>
+    </div>
+
+    <div class="brands-marquee" aria-hidden="false">
+      <div class="marquee-track">
+        <!-- set A -->
+        <span class="brand"><img src="assets/logo-calm.png" alt="Calm" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Calm</b></span>
+        <span class="brand"><img src="assets/logo-galicia.png" alt="Banco Galicia" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Galicia</b></span>
+        <span class="brand"><img src="assets/logo-siglo21.png" alt="Siglo 21" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Siglo 21</b></span>
+        <span class="brand"><img src="assets/logo-intramed.png" alt="IntraMed" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">IntraMed</b></span>
+        <span class="brand"><img src="assets/logo-beast.png" alt="Beast" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Beast</b></span>
+        <span class="brand"><img src="assets/logo-endurance.png" alt="Endurance" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Endurance</b></span>
+        <!-- set B (duplicate for seamless loop) -->
+        <span class="brand"><img src="assets/logo-calm.png" alt="Calm" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Calm</b></span>
+        <span class="brand"><img src="assets/logo-galicia.png" alt="Banco Galicia" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Galicia</b></span>
+        <span class="brand"><img src="assets/logo-siglo21.png" alt="Siglo 21" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Siglo 21</b></span>
+        <span class="brand"><img src="assets/logo-intramed.png" alt="IntraMed" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">IntraMed</b></span>
+        <span class="brand"><img src="assets/logo-beast.png" alt="Beast" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Beast</b></span>
+        <span class="brand"><img src="assets/logo-endurance.png" alt="Endurance" onerror="this.closest('.brand').classList.add('no-logo')"><b class="brand-text">Endurance</b></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SUCCESS CASES ==================== -->
+  <section class="cases" id="casos">
     <div class="container">
-      <div class="section-label reveal">Selected Work</div>
+      <div class="section-label reveal">
+        <span lang="es">Casos de éxito</span><span lang="en">Success stories</span>
+      </div>
+    </div>
 
-      <!-- Featured real cases -->
-      <div class="work-featured">
+    <div class="cases-scroller reveal">
+      <button class="cases-arrow cases-arrow-prev" type="button" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
 
-        <!-- Case: Calm -->
-        <button class="case-card reveal reveal-d1" data-case="calm" type="button" aria-label="Open Calm case study">
+      <div class="cases-track" id="cases-track">
+
+        <!-- Case 1: Calm — Hot Sale -->
+        <button class="case-card" data-case="calm" type="button" aria-label="Ver caso Calm — La cama de tu madre">
           <div class="case-card-media">
-            <img src="assets/calm-cover.jpg" alt="Calm — Hot Sale campaign" loading="lazy">
+            <img src="assets/calm-cover.jpg" alt="Calm — La cama de tu madre" loading="lazy" onerror="this.style.display='none'">
           </div>
           <div class="case-card-info">
-            <div class="case-card-row">
-              <img class="case-card-logo" src="assets/logo-calm.png" alt="Calm" loading="lazy">
-              <span class="case-card-view">View case
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </span>
+            <div class="case-card-top">
+              <img class="case-card-logo" src="assets/logo-calm.png" alt="Calm" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="case-card-title">
-              <h3 class="case-card-name">Calm</h3>
-              <span class="case-card-sub">Hot Sale — “Malas noches” campaign</span>
+            <div class="case-card-btm">
+              <div class="case-card-titles">
+                <span class="case-card-title">La cama de tu madre</span>
+                <span class="case-card-sub">Hot Sale 2026</span>
+              </div>
+              <span class="case-card-solution">AI Film Studio</span>
             </div>
           </div>
         </button>
 
-        <!-- Case: Galicia -->
-        <button class="case-card reveal reveal-d2" data-case="galicia" type="button" aria-label="Open Banco Galicia case study">
+        <!-- Case 2: Galicia -->
+        <button class="case-card" data-case="galicia" type="button" aria-label="Ver caso Banco Galicia — Doble Camiseta">
           <div class="case-card-media">
-            <img src="assets/galicia-cover.jpg" alt="Banco Galicia — FIFA World Cup campaign" loading="lazy">
+            <img src="assets/galicia-cover.jpg" alt="Banco Galicia — Doble Camiseta" loading="lazy" onerror="this.style.display='none'">
           </div>
           <div class="case-card-info">
-            <div class="case-card-row">
-              <img class="case-card-logo" src="assets/logo-galicia.png" alt="Banco Galicia" loading="lazy">
-              <span class="case-card-view">View case
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </span>
+            <div class="case-card-top">
+              <img class="case-card-logo" src="assets/logo-galicia.png" alt="Banco Galicia" loading="lazy" onerror="this.style.display='none'">
             </div>
-            <div class="case-card-title">
-              <h3 class="case-card-name">Banco Galicia</h3>
-              <span class="case-card-sub">FIFA World Cup — “Doble camiseta”</span>
+            <div class="case-card-btm">
+              <div class="case-card-titles">
+                <span class="case-card-title">Doble Camiseta</span>
+                <span class="case-card-sub">FIFA World Cup 2026</span>
+              </div>
+              <span class="case-card-solution">AI Film Studio</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- Case 3: Calm — Catálogo (Creative AI) -->
+        <button class="case-card" data-case="catalogo" type="button" aria-label="Ver caso Calm — Renovación Catálogo">
+          <div class="case-card-media">
+            <img src="assets/catalogo-1.jpg" alt="Calm — Renovación Catálogo" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="case-card-info">
+            <div class="case-card-top">
+              <img class="case-card-logo" src="assets/logo-calm.png" alt="Calm" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div class="case-card-btm">
+              <div class="case-card-titles">
+                <span class="case-card-title">Renovación Catálogo</span>
+                <span class="case-card-sub">2026</span>
+              </div>
+              <span class="case-card-solution">Creative AI</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- Case 4: ABN Studio — The Awakening of Yara -->
+        <button class="case-card" data-case="yara" type="button" aria-label="Ver caso The Awakening of Yara">
+          <div class="case-card-media">
+            <img src="assets/yara-cover.jpg" alt="The Awakening of Yara" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="case-card-info">
+            <div class="case-card-top">
+              <img class="case-card-logo case-card-logo-abn" src="logo-white.svg" alt="ABN Studio" loading="lazy">
+            </div>
+            <div class="case-card-btm">
+              <div class="case-card-titles">
+                <span class="case-card-title">The Awakening of Yara</span>
+                <span class="case-card-sub">2026</span>
+              </div>
+              <span class="case-card-solution">AI Film Studio</span>
             </div>
           </div>
         </button>
 
       </div>
 
-      <!-- More work -->
-      <div class="work-more-label reveal">More work</div>
-      <div class="work-grid">
-
-        <div class="work-card reveal reveal-d1">
-          <div class="work-card-bg">
-            <img src="assets/work-avatar-krea.png" alt="AI Avatar — KREA Design" loading="lazy">
-          </div>
-          <div class="work-card-overlay">
-            <h4 class="work-card-name">AI Avatar</h4>
-            <span class="work-card-cat">UGC & Avatars</span>
-          </div>
-        </div>
-
-        <div class="work-card reveal reveal-d2">
-          <div class="work-card-bg">
-            <img src="assets/portfolio-2.png" alt="Flux — Motion Design" loading="lazy">
-          </div>
-          <div class="work-card-overlay">
-            <h4 class="work-card-name">Flux</h4>
-            <span class="work-card-cat">Motion & Video</span>
-          </div>
-        </div>
-
-        <div class="work-card reveal reveal-d1">
-          <div class="work-card-bg">
-            <img src="assets/work-blue-profile.png" alt="Clarity — Brand Visual" loading="lazy">
-          </div>
-          <div class="work-card-overlay">
-            <h4 class="work-card-name">Clarity</h4>
-            <span class="work-card-cat">AI Content</span>
-          </div>
-        </div>
-
-        <div class="work-card reveal reveal-d2">
-          <div class="work-card-bg">
-            <img src="assets/portfolio-4.png" alt="Molten — 3D Visual" loading="lazy">
-          </div>
-          <div class="work-card-overlay">
-            <h4 class="work-card-name">Molten</h4>
-            <span class="work-card-cat">AI Content</span>
-          </div>
-        </div>
-
-      </div>
+      <button class="cases-arrow cases-arrow-next" type="button" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
     </div>
   </section>
 
 
   <!-- ==================== SERVICES ==================== -->
-  <section class="services" id="services">
+  <section class="services" id="servicios">
     <div class="container">
-      <div class="section-label reveal">Services</div>
+      <div class="section-label reveal">
+        <span lang="es">Servicios</span><span lang="en">Services</span>
+      </div>
 
       <div class="services-grid">
 
+        <!-- 01 — Creative AI -->
         <div class="service-item reveal reveal-d1">
           <span class="service-num">01</span>
-          <h3 class="service-title">AI Content Creation</h3>
-          <p class="service-desc">Next-generation visuals crafted with artificial intelligence. Beyond what cameras can capture.</p>
+          <div class="service-main">
+            <h3 class="service-title">Creative AI</h3>
+            <p class="service-desc">
+              <span lang="es">Especialistas en la generación de imágenes y videos hiperrealistas para publicidad digital o tradicional, impulsados con IA. Alta expertise en mantener la fidelidad de cada producto: morfología, colorimetría, peso y utilización. Del render al producto en poco tiempo y con eficiencia en costos.</span>
+              <span lang="en">Specialists in generating hyperrealistic images and video for digital and traditional advertising, AI-driven. Deep expertise keeping every product faithful — morphology, colorimetry, weight and use. From render to product, fast and cost-efficient.</span>
+            </p>
+          </div>
+          <ul class="service-bullets">
+            <li><span class="sb-name"><span lang="es">Fidelidad absoluta</span><span lang="en">Absolute fidelity</span></span><span class="sb-text"><span lang="es">Preservación exacta de colores, texturas, morfología, pesos y branding del producto.</span><span lang="en">Exact preservation of color, texture, morphology, weight and product branding.</span></span></li>
+            <li><span class="sb-name"><span lang="es">Contextualización infinita</span><span lang="en">Infinite context</span></span><span class="sb-text"><span lang="es">Exhibición en cualquier entorno, clima, iluminación o ángulo, sin traslados ni sets.</span><span lang="en">Show it in any setting, weather, light or angle — no travel, no sets.</span></span></li>
+            <li><span class="sb-name"><span lang="es">Sustitución de shooting</span><span lang="en">Shoot replacement</span></span><span class="sb-text"><span lang="es">Paso directo de renders o fotos de estudio a situaciones reales de uso.</span><span lang="en">Go straight from renders or studio shots to real-life use.</span></span></li>
+          </ul>
         </div>
 
+        <!-- 02 — AI Film Studio -->
         <div class="service-item reveal reveal-d2">
           <span class="service-num">02</span>
-          <h3 class="service-title">Motion & Video</h3>
-          <p class="service-desc">Dynamic visual stories that captivate audiences and elevate brands.</p>
+          <div class="service-main">
+            <h3 class="service-title">AI Film Studio</h3>
+            <p class="service-desc">
+              <span lang="es">Desarrollamos cortos cinematográficos, publicidades y campañas de performance en hiperrealismo, con foco especial en la indetección al ojo humano. Un equipo especialista en insights que trabaja sobre: high-end craft, reducción de costos productivos y reducción de tiempos.</span>
+              <span lang="en">We build cinematic shorts, ads and performance campaigns in hyperrealism, obsessed with being undetectable to the human eye. An insight-first team focused on high-end craft, lower production cost and faster turnaround.</span>
+            </p>
+          </div>
+          <ul class="service-bullets">
+            <li><span class="sb-name">High-Speed Production</span><span class="sb-text"><span lang="es">Reducción drástica del tiempo de pre y postproducción: de meses a días.</span><span lang="en">Drastically shorter pre- and post-production: from months to days.</span></span></li>
+            <li><span class="sb-name">Narrativa Human First</span><span class="sb-text"><span lang="es">Insight conceptual humano traducido en productos generativos avanzados.</span><span lang="en">Human conceptual insight translated into advanced generative pieces.</span></span></li>
+            <li><span class="sb-name">Real Time Marketing</span><span class="sb-text"><span lang="es">La velocidad de ejecución permite generar piezas de alta calidad y ser parte de tendencias globales.</span><span lang="en">Execution speed lets us deliver high-quality pieces and ride global trends.</span></span></li>
+          </ul>
         </div>
 
+        <!-- 03 — Producción -->
         <div class="service-item reveal reveal-d3">
           <span class="service-num">03</span>
-          <h3 class="service-title">UGC & Avatars</h3>
-          <p class="service-desc">Digital personas powered by cutting-edge avatar technology. Real impact, zero friction.</p>
-        </div>
-
-        <div class="service-item reveal reveal-d4">
-          <span class="service-num">04</span>
-          <h3 class="service-title">Digital Media</h3>
-          <p class="service-desc">Strategic content engineered for the platforms that matter most.</p>
+          <div class="service-main">
+            <h3 class="service-title">Producción</h3>
+            <p class="service-desc">
+              <span lang="es">Conocemos los pains de las marcas hoy. En un mundo saturado de contenido, necesitan comunicar múltiples productos, en múltiples formatos, para todos los canales digitales. Los equipos in-house sufren la falta de capacidad productiva, que impacta directo en la performance de paid-media. Funcionamos como apéndice creativo de cada cliente, sin fricciones ni restricciones.</span>
+              <span lang="en">We know the pains brands face today. In a content-saturated world, they must communicate many products, in many formats, across every digital channel. In-house teams hit production ceilings that hit paid-media performance directly. We plug in as each client's creative appendage — no friction, no limits.</span>
+            </p>
+          </div>
+          <ul class="service-bullets">
+            <li><span class="sb-name"><span lang="es">Refresh constante de creativos</span><span lang="en">Constant creative refresh</span></span><span class="sb-text"><span lang="es">Para combatir la fatiga de pauta y generar piezas únicas para cada etapa del funnel.</span><span lang="en">To fight ad fatigue and produce unique pieces for every funnel stage.</span></span></li>
+            <li><span class="sb-name"><span lang="es">Formatos nativos</span><span lang="en">Native formats</span></span><span class="sb-text"><span lang="es">Adaptación con velocidad y rigurosidad según el canal: Meta, Google, TikTok y Vía Pública.</span><span lang="en">Fast, rigorous adaptation per channel: Meta, Google, TikTok and OOH.</span></span></li>
+            <li><span class="sb-name"><span lang="es">Apéndice operativo</span><span lang="en">Operational appendage</span></span><span class="sb-text"><span lang="es">Nos integramos como brazo ejecutor y rápido del equipo in-house de cada cliente.</span><span lang="en">We integrate as the fast executing arm of each client's in-house team.</span></span></li>
+          </ul>
         </div>
 
       </div>
@@ -197,12 +269,15 @@
 
 
   <!-- ==================== CONTACT ==================== -->
-  <section class="contact" id="contact">
+  <section class="contact" id="contacto">
     <div class="container">
-      <div class="section-label reveal" style="justify-content: center;">Get in Touch</div>
+      <div class="section-label reveal" style="justify-content: center;">
+        <span lang="es">Contacto</span><span lang="en">Get in Touch</span>
+      </div>
 
       <h2 class="contact-heading reveal">
-        Let's create something<br><em>extraordinary</em>
+        <span lang="es">Creemos algo<br><em>extraordinario</em></span>
+        <span lang="en">Let's create something<br><em>extraordinary</em></span>
       </h2>
 
       <a href="mailto:studio@abndigital.com.ar" class="contact-email reveal reveal-d1" id="contact-email">
@@ -210,7 +285,7 @@
       </a>
 
       <div class="contact-social reveal reveal-d2">
-        <span>Follow us —</span>
+        <span><span lang="es">Seguinos —</span><span lang="en">Follow us —</span></span>
         <a href="https://instagram.com/abndigital" target="_blank" rel="noopener noreferrer" id="instagram-link">Instagram</a>
       </div>
     </div>
@@ -223,7 +298,7 @@
       <a href="#hero" class="footer-logo">
         <img src="logo-white.svg" alt="ABN Studio">
       </a>
-      <span class="footer-copy">© 2025 ABN Studio. All rights reserved.</span>
+      <span class="footer-copy">© 2026 ABN Studio. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></span>
     </div>
   </footer>
 
@@ -237,13 +312,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
 
-      <!-- ---------- CALM ---------- -->
+      <!-- ---------- CALM · Hot Sale ---------- -->
       <article class="case-panel" data-panel="calm" hidden>
         <header class="case-head">
           <img class="case-logo" src="assets/logo-calm.png" alt="Calm">
-          <span class="case-eyebrow">2026 · Retail · Sleep &amp; Rest</span>
-          <h2 class="case-title" id="case-title-calm">Calm</h2>
-          <span class="case-service">Creative + High Visual AI · Campaign</span>
+          <span class="case-eyebrow">AI Film Studio · Hot Sale 2026</span>
+          <h2 class="case-title" id="case-title-calm">La cama de tu madre</h2>
+          <span class="case-service"><span lang="es">Campaña · Cinco spots</span><span lang="en">Campaign · Five films</span></span>
         </header>
 
         <div class="case-stage">
@@ -263,7 +338,7 @@
 
           <div class="case-gallery" aria-label="Campaign films">
             <button class="case-thumb is-active" type="button" data-src="assets/calm-todos.mp4" data-poster="assets/calm-todos-poster.jpg">
-              <img src="assets/calm-todos-poster.jpg" alt="Calm — product reel" loading="lazy"><span>Reel</span>
+              <img src="assets/calm-todos-poster.jpg" alt="Calm — ALL" loading="lazy"><span>ALL</span>
             </button>
             <button class="case-thumb" type="button" data-src="assets/calm-autos.mp4" data-poster="assets/calm-autos-poster.jpg">
               <img src="assets/calm-autos-poster.jpg" alt="Calm — Autos" loading="lazy"><span>Autos</span>
@@ -275,7 +350,7 @@
               <img src="assets/calm-oficina-poster.jpg" alt="Calm — Oficina" loading="lazy"><span>Oficina</span>
             </button>
             <button class="case-thumb" type="button" data-src="assets/calm-papi-futbol.mp4" data-poster="assets/calm-papi-futbol-poster.jpg">
-              <img src="assets/calm-papi-futbol-poster.jpg" alt="Calm — Papi Fútbol" loading="lazy"><span>Papi Fútbol</span>
+              <img src="assets/calm-papi-futbol-poster.jpg" alt="Calm — Fútbol" loading="lazy"><span>Fútbol</span>
             </button>
           </div>
         </div>
@@ -283,24 +358,27 @@
         <div class="case-body">
           <div class="case-narrative">
             <div class="case-block">
-              <span class="case-block-label">The challenge</span>
-              <p>Hot Sale is the loudest week of the Argentine retail calendar — every brand screaming the same discounts into the same feed. Calm needed to cut through without simply shouting a bigger percentage off, and turn a mattress sale into something people actually wanted to watch and share.</p>
+              <span class="case-block-label"><span lang="es">El desafío</span><span lang="en">The challenge</span></span>
+              <p lang="es">Hot Sale es la semana más ruidosa del calendario del retail argentino: todas las marcas gritando los mismos descuentos en el mismo feed. Calm necesitaba destacar sin limitarse a gritar un porcentaje más alto, y transformar las ventas en algo que la gente realmente quisiera ver y compartir.</p>
+              <p lang="en">Hot Sale is the loudest week of the Argentine retail calendar — every brand screaming the same discounts into the same feed. Calm needed to cut through without simply shouting a bigger percentage off, and turn a sale into something people actually wanted to watch and share.</p>
             </div>
             <div class="case-block">
-              <span class="case-block-label">The idea</span>
-              <p>We started from a universal truth: a bad night's sleep makes you short-tempered — the kind of day where anything sets you off. So we built the campaign around the split-second before you lose it, and swapped the Argentine swear word for the thing that would have prevented it: Calm. <em>“Almohada”, “Colchón”, “Espuma”, “Cama”</em> land exactly where the insult was meant to go. Four films — road rage (<em>Autos</em>), a rough morning (<em>Mañana</em>), the office (<em>Oficina</em>) and Tuesday-night football (<em>Papi Fútbol</em>) — plus a product reel, all in the visual language of the clips people already screenshot and forward.</p>
+              <span class="case-block-label"><span lang="es">La idea</span><span lang="en">The idea</span></span>
+              <p lang="es">Partimos de una verdad universal: dormir mal te deja de pocas pulgas, en uno de esos días donde cualquier cosa te salta la ficha. Construimos la campaña alrededor de ese segundo previo a perder el control y reemplazamos el insulto argentino por lo único que lo habría evitado: Calm. <em>“Almohada”, “Colchón”, “Espuma”</em> y <em>“Cama”</em> caen exactamente donde iba el insulto clásico. Cuatro spots nativos —furia al volante (<em>Autos</em>), una mañana difícil (<em>Mañana</em>), caos de oficina (<em>Oficina</em>) y el fútbol del martes (<em>Fútbol</em>)— más un reel madre, en el lenguaje visual de los clips que la gente ya captura y reenvía.</p>
+              <p lang="en">We started from a universal truth: a bad night's sleep makes you short-tempered — the kind of day where anything sets you off. We built the campaign around the split-second before you lose it, and swapped the Argentine swear word for the one thing that would have prevented it: Calm. <em>“Almohada”, “Colchón”, “Espuma”</em> and <em>“Cama”</em> land exactly where the insult was meant to go. Four native films — road rage (<em>Autos</em>), a rough morning (<em>Mañana</em>), office chaos (<em>Oficina</em>) and Tuesday football (<em>Fútbol</em>) — plus a mother reel, in the visual language of the clips people already screenshot and forward.</p>
             </div>
             <div class="case-block">
-              <span class="case-block-label">The result</span>
-              <p>Produced with a hybrid-intelligence system — human comedic timing and casting judgment paired with AI-first execution. Five films delivered without a single shoot day, ready in time for Hot Sale.</p>
+              <span class="case-block-label"><span lang="es">El resultado</span><span lang="en">The result</span></span>
+              <p lang="es">Producido con un sistema de inteligencia híbrida: el timing cómico y el criterio de casting humano combinados con una ejecución AI-first. Cinco spots entregados sin un solo día de rodaje. Reducción sustancial de costos y tiempos. Listos para el Hot Sale.</p>
+              <p lang="en">Produced with a hybrid-intelligence system — human comedic timing and casting judgment paired with AI-first execution. Five films delivered without a single shoot day. Substantially lower cost and time. Ready for Hot Sale.</p>
             </div>
           </div>
 
           <div class="case-metrics">
-            <div class="metric"><span class="metric-num">−75%</span><span class="metric-label">Production cost</span></div>
-            <div class="metric"><span class="metric-num">−70%</span><span class="metric-label">Production time</span></div>
-            <div class="metric"><span class="metric-num">5</span><span class="metric-label">Films in 6 business days</span></div>
-            <div class="metric"><span class="metric-num">0</span><span class="metric-label">Shoot days</span></div>
+            <div class="metric"><span class="metric-num">−75%</span><span class="metric-label"><span lang="es">Costo de producción</span><span lang="en">Production cost</span></span></div>
+            <div class="metric"><span class="metric-num">−70%</span><span class="metric-label"><span lang="es">Tiempo de producción</span><span lang="en">Production time</span></span></div>
+            <div class="metric"><span class="metric-num">5</span><span class="metric-label"><span lang="es">Spots en 6 días hábiles</span><span lang="en">Films in 6 business days</span></span></div>
+            <div class="metric"><span class="metric-num">0</span><span class="metric-label"><span lang="es">Días de rodaje</span><span lang="en">Shoot days</span></span></div>
           </div>
 
           <div class="case-tools">
@@ -316,9 +394,9 @@
       <article class="case-panel" data-panel="galicia" hidden>
         <header class="case-head">
           <img class="case-logo" src="assets/logo-galicia.png" alt="Banco Galicia">
-          <span class="case-eyebrow">2026 · Finance · Banking</span>
-          <h2 class="case-title" id="case-title-galicia">Banco Galicia</h2>
-          <span class="case-service">Creative + High Visual AI · Campaign</span>
+          <span class="case-eyebrow">AI Film Studio · FIFA World Cup 2026</span>
+          <h2 class="case-title" id="case-title-galicia">Doble Camiseta</h2>
+          <span class="case-service"><span lang="es">Campaña · Marketing de guerrilla</span><span lang="en">Campaign · Guerrilla marketing</span></span>
         </header>
 
         <div class="case-stage">
@@ -340,24 +418,27 @@
         <div class="case-body">
           <div class="case-narrative">
             <div class="case-block">
-              <span class="case-block-label">The challenge</span>
-              <p>June 2026: the FIFA World Cup kicks off in the United States — the most-watched event on earth, and for a football nation like Argentina, far more than a tournament. Galicia wanted to own the cultural conversation at its most saturated moment, surrounded by competitors, through guerrilla marketing — <em>without</em> sponsoring AFA or the national team, without World Cup promos or discounts, and without raffling trips to the US. And it had to be conceived, developed and executed in under 14 days.</p>
+              <span class="case-block-label"><span lang="es">El desafío</span><span lang="en">The challenge</span></span>
+              <p lang="es">Junio de 2026: arranca la Copa Mundial de la FIFA en Estados Unidos, el evento más visto del planeta y, para una nación futbolera como la Argentina, muchísimo más que un torneo. Galicia quería adueñarse de la conversación cultural en su momento de mayor saturación, rodeado de competidores y mediante marketing de guerrilla: sin sponsorear a la AFA ni a la Selección, sin promos ni descuentos del Mundial y sin sortear viajes a EE. UU. Y tenía que ser concebido, desarrollado y ejecutado en menos de 14 días.</p>
+              <p lang="en">June 2026: the FIFA World Cup kicks off in the United States — the most-watched event on earth, and for a football nation like Argentina, far more than a tournament. Galicia wanted to own the cultural conversation at its most saturated moment, surrounded by competitors, through guerrilla marketing — without sponsoring AFA or the national team, without World Cup promos or discounts, and without raffling trips to the US. And it had to be conceived, developed and executed in under 14 days.</p>
             </div>
             <div class="case-block">
-              <span class="case-block-label">The idea</span>
-              <p>At a moment of peak national pride, we leaned on one absolute truth: Galicia is the only truly Argentine bank — the only one that operates exclusively inside the country. From there we built <em>“Doble camiseta”</em>: a distinctly Argentine way of unmasking the banks that keep a plan B and operate abroad, positioning Galicia as the one that only celebrates when Argentina wins. To carry it, we recreated an iconic scene from the classic film <em>“Nueve Reinas”</em>, shot-for-shot, rewriting the script around the concept.</p>
+              <span class="case-block-label"><span lang="es">La idea</span><span lang="en">The idea</span></span>
+              <p lang="es">En el punto máximo del orgullo nacional, nos apoyamos en una verdad absoluta: Galicia es el único banco verdaderamente argentino, el único que opera exclusivamente dentro del país. A partir de ahí construimos <em>“Doble Camiseta”</em>: una forma bien argentina de desenmascarar a los bancos que tienen un plan B, posicionando a Galicia como el único que solo celebra cuando gana la Argentina. Para llevarlo a cabo, recreamos plano por plano una escena icónica de la película clásica <em>“Nueve Reinas”</em>, reescribiendo el guión en función del concepto.</p>
+              <p lang="en">At a moment of peak national pride, we leaned on one absolute truth: Galicia is the only truly Argentine bank — the only one that operates exclusively inside the country. From there we built <em>“Doble Camiseta”</em>: a distinctly Argentine way of unmasking the banks that keep a plan B, positioning Galicia as the one that only celebrates when Argentina wins. To pull it off, we recreated an iconic scene from the classic film <em>“Nueve Reinas”</em> shot-for-shot, rewriting the script around the concept.</p>
             </div>
             <div class="case-block">
-              <span class="case-block-label">The result</span>
-              <p>Insight, script and concept validated, the film was produced with a hybrid-intelligence system — human judgment paired with AI-first execution — crafted for hyperrealism, with a human voice-over carrying the emotional weight.</p>
+              <span class="case-block-label"><span lang="es">El resultado</span><span lang="en">The result</span></span>
+              <p lang="es">Con el insight, el guion y el concepto validados, el spot se produjo mediante un sistema de inteligencia híbrida —criterio humano combinado con una ejecución AI-first— diseñado para lograr un hiperrealismo total, con una voz en off humana sosteniendo el peso emocional.</p>
+              <p lang="en">With insight, script and concept validated, the film was produced with a hybrid-intelligence system — human judgment paired with AI-first execution — crafted for total hyperrealism, with a human voice-over carrying the emotional weight.</p>
             </div>
           </div>
 
           <div class="case-metrics">
-            <div class="metric"><span class="metric-num">−80%</span><span class="metric-label">Production cost</span></div>
-            <div class="metric"><span class="metric-num">−75%</span><span class="metric-label">Production time</span></div>
-            <div class="metric"><span class="metric-num">5</span><span class="metric-label">Business days to delivery</span></div>
-            <div class="metric"><span class="metric-num">&lt;14</span><span class="metric-label">Days concept to launch</span></div>
+            <div class="metric"><span class="metric-num">−80%</span><span class="metric-label"><span lang="es">Costo de producción</span><span lang="en">Production cost</span></span></div>
+            <div class="metric"><span class="metric-num">−75%</span><span class="metric-label"><span lang="es">Tiempo de producción</span><span lang="en">Production time</span></span></div>
+            <div class="metric"><span class="metric-num">5</span><span class="metric-label"><span lang="es">Días hábiles a entrega</span><span lang="en">Business days to delivery</span></span></div>
+            <div class="metric"><span class="metric-num">&lt;14</span><span class="metric-label"><span lang="es">Días de idea a lanzamiento</span><span lang="en">Days concept to launch</span></span></div>
           </div>
 
           <div class="case-tools">
@@ -369,11 +450,113 @@
         </div>
       </article>
 
+      <!-- ---------- CALM · Renovación Catálogo (Creative AI) ---------- -->
+      <article class="case-panel" data-panel="catalogo" hidden>
+        <header class="case-head">
+          <img class="case-logo" src="assets/logo-calm.png" alt="Calm">
+          <span class="case-eyebrow">Creative AI · 2026</span>
+          <h2 class="case-title" id="case-title-catalogo">Renovación Catálogo</h2>
+          <span class="case-service"><span lang="es">Producción visual · E-commerce</span><span lang="en">Visual production · E-commerce</span></span>
+        </header>
+
+        <div class="case-stage">
+          <div class="case-collage" aria-label="Renovación de catálogo">
+            <img src="assets/catalogo-1.jpg" alt="Catálogo Calm 1" loading="lazy" onerror="this.onerror=null;this.classList.add('ph');this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E'">
+            <img src="assets/catalogo-2.jpg" alt="Catálogo Calm 2" loading="lazy" onerror="this.onerror=null;this.classList.add('ph');this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E'">
+            <img src="assets/catalogo-3.jpg" alt="Catálogo Calm 3" loading="lazy" onerror="this.onerror=null;this.classList.add('ph');this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E'">
+            <img src="assets/catalogo-4.jpg" alt="Catálogo Calm 4" loading="lazy" onerror="this.onerror=null;this.classList.add('ph');this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E'">
+            <img src="assets/catalogo-5.jpg" alt="Catálogo Calm 5" loading="lazy" onerror="this.onerror=null;this.classList.add('ph');this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E'">
+            <img src="assets/catalogo-6.jpg" alt="Catálogo Calm 6" loading="lazy" onerror="this.onerror=null;this.classList.add('ph');this.src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22/%3E'">
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-narrative">
+            <div class="case-block">
+              <span class="case-block-label"><span lang="es">El desafío</span><span lang="en">The challenge</span></span>
+              <p lang="es">Calm, la marca líder en descanso y bienestar en Argentina, necesitaba renovar su catálogo online. El objetivo era claro: incrementar la conversión mostrando sus productos en sets y espacios reales (lifestyle) para ayudar al consumidor a visualizar su compra. Pero frente al volumen del portafolio y la enorme variación de telas, colores y texturas, una mega-producción fotográfica tradicional resultaba financieramente inviable y operativamente casi imposible.</p>
+              <p lang="en">Calm, Argentina's leading rest & wellness brand, needed to refresh its online catalog. The goal was clear: lift conversion by showing products in real lifestyle sets so shoppers could picture the purchase. But given the portfolio size and the huge variation in fabrics, colors and textures, a traditional mega photo shoot was financially unviable and operationally near-impossible.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label"><span lang="es">La idea</span><span lang="en">The idea</span></span>
+              <p lang="es">La solución no era simplemente generar imágenes con IA, sino construir un sistema de producción visual de alta fidelidad. En una categoría donde la percepción del material define la compra, el rigor era innegociable: precisión absoluta en morfologías, colores, terminaciones, caídas de tela y texturas de cada producto. Diseñamos un flujo impulsado por IA Generativa que ubicó cada variante del catálogo en entornos hiperrealistas y aspiracionales, sin sacrificar un milímetro de fidelidad técnica respecto al producto físico.</p>
+              <p lang="en">The answer wasn't just to generate AI images, but to build a high-fidelity visual production system. In a category where material perception drives the purchase, rigor was non-negotiable: absolute precision in morphology, color, finishes, fabric drape and texture for every product. We designed a Generative-AI workflow that placed each catalog variant in hyperrealistic, aspirational settings — without sacrificing a millimeter of technical fidelity to the physical product.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label"><span lang="es">El resultado</span><span lang="en">The result</span></span>
+              <p lang="es">Escala, velocidad y performance. Entregamos más de 200 piezas visuales únicas de calidad fotorrealista en menos de 7 días de producción. El sistema eliminó la fricción logística, redujo drásticamente los costos de producción tradicionales y aceleró el time-to-market, logrando el objetivo principal: una mejora directa en las métricas de conversión y experiencia de compra del e-commerce.</p>
+              <p lang="en">Scale, speed and performance. We delivered 200+ unique photorealistic visual pieces in under 7 production days. The system removed logistical friction, slashed traditional production costs and accelerated time-to-market — hitting the main goal: a direct lift in e-commerce conversion and shopping experience.</p>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric"><span class="metric-num">200+</span><span class="metric-label"><span lang="es">Piezas fotorrealistas</span><span lang="en">Photorealistic pieces</span></span></div>
+            <div class="metric"><span class="metric-num">&lt;7</span><span class="metric-label"><span lang="es">Días de producción</span><span lang="en">Production days</span></span></div>
+            <div class="metric"><span class="metric-num">100%</span><span class="metric-label"><span lang="es">Fidelidad de producto</span><span lang="en">Product fidelity</span></span></div>
+            <div class="metric"><span class="metric-num">0</span><span class="metric-label"><span lang="es">Sets físicos</span><span lang="en">Physical sets</span></span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- ABN STUDIO · The Awakening of Yara ---------- -->
+      <article class="case-panel" data-panel="yara" hidden>
+        <header class="case-head">
+          <img class="case-logo case-logo-abn" src="logo-white.svg" alt="ABN Studio">
+          <span class="case-eyebrow">AI Film Studio · 2026</span>
+          <h2 class="case-title" id="case-title-yara">The Awakening of Yara</h2>
+          <span class="case-service"><span lang="es">Cortometraje · Statement piece</span><span lang="en">Short film · Statement piece</span></span>
+        </header>
+
+        <div class="case-stage">
+          <div class="case-video-wrap">
+            <video class="case-video" playsinline muted loop preload="none"
+                   poster="assets/yara-cover.jpg"
+                   data-default-src="assets/yara.mp4"
+                   data-default-poster="assets/yara-cover.jpg">
+              <source src="assets/yara.mp4" type="video/mp4">
+            </video>
+            <button class="case-mute" type="button" aria-label="Unmute video">
+              <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+              <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+              <span class="case-mute-label">Sound</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="case-body">
+          <div class="case-narrative">
+            <div class="case-block">
+              <span class="case-block-label"><span lang="es">El desafío</span><span lang="en">The challenge</span></span>
+              <p lang="es">Para el lanzamiento oficial de ABN Studio no queríamos presentar un manifiesto teórico ni un reel tradicional. En una industria donde la IA audiovisual aún despierta escepticismo —asociada a contenidos plásticos, imprecisos o con el delatador "look IA"—, el objetivo era sentar un precedente: una pieza de prueba de concepto que demostrara que nuestro flujo AI-first puede alcanzar el nivel de craft más exigente del cine y la publicidad de lujo, logrando que la tecnología fuera absolutamente indetectable al ojo y al oído humano.</p>
+              <p lang="en">For ABN Studio's official launch we didn't want a theoretical manifesto or a traditional reel. In an industry where AI film still draws skepticism — associated with plastic, imprecise content and the tell-tale "AI look" — the goal was to set a precedent: a proof-of-concept piece showing our AI-first workflow can reach the most demanding craft of cinema and luxury advertising, making the technology utterly undetectable to the human eye and ear.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label"><span lang="es">La idea</span><span lang="en">The idea</span></span>
+              <p lang="es">Concebimos <em>“The Awakening of Yara”</em>: un cortometraje de ciencia ficción hiperrealista diseñado intencionalmente como un test de estrés narrativo, visual y sonoro. En lugar de eludir los mayores desafíos de la IA, decidimos abordarlos de frente: interpretación actoral de alta carga emotiva, físicas de luz complejas, texturas orgánicas y un diseño de audio envolvente de calidad cinematográfica. No tratamos a la IA como un generador de imágenes, sino como un set de rodaje virtual operado con el rigor técnico, la dirección de arte y la sensibilidad narrativa de una producción tradicional.</p>
+              <p lang="en">We conceived <em>“The Awakening of Yara”</em>: a hyperrealistic sci-fi short intentionally designed as a narrative, visual and sonic stress test. Instead of dodging AI's hardest challenges, we took them head-on: high-emotion acting, complex light physics, organic textures and immersive cinematic sound design. We treated AI not as an image generator but as a virtual film set — run with the technical rigor, art direction and narrative sensibility of a traditional production.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-block-label"><span lang="es">El resultado</span><span lang="en">The result</span></span>
+              <p lang="es">La prueba definitiva de la visión de ABN Studio. <em>“The Awakening of Yara”</em> se consolidó como una pieza high-end donde la frontera entre la captura sintética y la filmación real desaparece por completo. Logramos un estándar cinematográfico indiscutible en tiempo récord, sin un solo set físico, cámara ni equipo de rodaje tradicional, demostrando que la máxima sofisticación estética y sonora no está peleada con la velocidad y la eficiencia.</p>
+              <p lang="en">The definitive proof of ABN Studio's vision. <em>“The Awakening of Yara”</em> stands as a high-end piece where the line between synthetic capture and real filming disappears entirely. We hit an undeniable cinematic standard in record time — without a single physical set, camera or traditional crew — proving that peak aesthetic and sonic sophistication isn't at odds with speed and efficiency.</p>
+            </div>
+          </div>
+
+          <div class="case-metrics">
+            <div class="metric"><span class="metric-num">0</span><span class="metric-label"><span lang="es">Sets físicos</span><span lang="en">Physical sets</span></span></div>
+            <div class="metric"><span class="metric-num">0</span><span class="metric-label"><span lang="es">Cámaras / rodaje</span><span lang="en">Cameras / shoot</span></span></div>
+            <div class="metric"><span class="metric-num">100%</span><span class="metric-label"><span lang="es">Hiperrealismo</span><span lang="en">Hyperrealism</span></span></div>
+            <div class="metric"><span class="metric-num">AI-first</span><span class="metric-label"><span lang="es">Set de rodaje virtual</span><span lang="en">Virtual film set</span></span></div>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 
 
   <!-- Scripts -->
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 
 </body>

@@ -337,10 +337,7 @@ body::after {
 }
 
 .section-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--ash-faint);
+  display: none;
 }
 
 /* ============================================
@@ -1173,4 +1170,329 @@ body.case-open {
   .case-mute-label {
     display: none;
   }
+}
+
+/* ============================================
+   I18N — LANGUAGE VISIBILITY
+   ============================================ */
+html[lang="es"] [lang="en"],
+html[lang="en"] [lang="es"] { display: none !important; }
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--ash-faint);
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: var(--ash-mid);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.lang-switch:hover { color: var(--orange); border-color: var(--orange); }
+html[lang="es"] .ls-to-es { display: none; }
+html[lang="en"] .ls-to-en { display: none; }
+
+/* ============================================
+   BRANDS — TRUSTED BY (MARQUEE)
+   ============================================ */
+.brands {
+  background: var(--dark);
+  padding: clamp(40px, 6vh, 84px) 0;
+  overflow: hidden;
+}
+
+.brands-head {
+  max-width: 1400px;
+  margin: 0 auto 36px;
+  padding: 0 var(--gutter);
+}
+
+.brands-label {
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ash-dim);
+}
+
+.brands-marquee {
+  position: relative;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+
+.brands-marquee:hover .marquee-track { animation-play-state: paused; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  margin: 0 clamp(26px, 3.6vw, 60px);
+  flex: 0 0 auto;
+}
+
+/* TEMP: hasta tener los logos en blanco/mono, el marquee usa wordmarks de texto
+   (uniformes y prolijos). Cuando lleguen los PNG blancos, cambiar a img. */
+.brand img { display: none; }
+
+.brand-text {
+  display: inline;
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--ash-mid);
+  white-space: nowrap;
+  transition: color 0.35s ease;
+}
+
+.brand:hover .brand-text { color: var(--ash); }
+
+/* ============================================
+   CASES — HORIZONTAL SCROLLER
+   ============================================ */
+.cases {
+  background: var(--dark-warm);
+  padding: var(--section-pad) 0;
+}
+
+.cases .section-label { margin-bottom: 40px; }
+
+.cases-scroller { position: relative; }
+
+.cases-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px var(--gutter) 22px;
+  scroll-padding-left: var(--gutter);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cases-track::-webkit-scrollbar { display: none; }
+
+.cases-track .case-card {
+  scroll-snap-align: start;
+  flex: 0 0 clamp(300px, 44vw, 560px);
+  width: clamp(300px, 44vw, 560px);
+  aspect-ratio: 16 / 11;
+}
+
+/* New card info layout: logo TL · title BL · solution BR */
+.case-card-top { display: flex; align-items: flex-start; }
+
+.case-card-logo {
+  height: 26px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* ABN Studio mark stays a clean white lockup (no badge chrome) */
+.case-card-logo-abn {
+  height: 22px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.case-card-btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.case-card-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.case-card-title {
+  font-size: clamp(1.2rem, 1.9vw, 1.7rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.cases-track .case-card-sub {
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--ash-mid);
+}
+
+.case-card-solution {
+  flex: 0 0 auto;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  padding: 6px 11px;
+  border: 1px solid rgba(247, 126, 43, 0.42);
+  border-radius: 999px;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Missing image → tasteful gradient placeholder */
+.case-card-media {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 60%, rgba(247, 126, 43, 0.12) 100%);
+}
+
+/* Scroller arrows */
+.cases-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 6, 4, 0.7);
+  border: 1px solid var(--ash-faint);
+  color: var(--ash);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.cases-arrow:hover { color: var(--orange); border-color: var(--orange); }
+.cases-arrow svg { width: 20px; height: 20px; }
+.cases-arrow-prev { left: 14px; }
+.cases-arrow-next { right: 14px; }
+.cases-arrow[disabled] { opacity: 0; pointer-events: none; }
+
+/* ============================================
+   SERVICES — 3 with bullets
+   ============================================ */
+.service-item {
+  grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.service-main { min-width: 0; }
+
+.service-main .service-title { margin-bottom: 16px; }
+
+.service-main .service-desc {
+  max-width: 440px;
+  padding-top: 0;
+}
+
+.service-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 6px;
+}
+
+.service-bullets li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sb-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ash);
+}
+
+.sb-text {
+  font-size: 0.78rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--ash-dim);
+}
+
+/* ============================================
+   CASE MODAL — collage (Creative AI) + ABN logo
+   ============================================ */
+.case-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.case-collage img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--surface), var(--surface-light));
+}
+
+.case-collage img.ph {
+  object-fit: contain;
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 60%, rgba(247, 126, 43, 0.1) 100%);
+}
+
+.case-logo-abn {
+  height: 30px;
+  border-radius: 0;
+}
+
+/* ============================================
+   RESPONSIVE — new sections
+   ============================================ */
+@media (max-width: 900px) {
+  .service-item {
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+  }
+  .service-bullets {
+    grid-column: 2;
+    padding-top: 4px;
+  }
+  .service-main .service-desc { max-width: none; }
+  .case-collage { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .cases-arrow { display: none; }
+  .cases-track .case-card {
+    flex-basis: 82vw;
+    width: 82vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-card-title { font-size: 1.15rem; }
+  .case-card-solution { font-size: 0.5rem; padding: 5px 9px; }
+  .lang-switch { padding: 5px 9px; font-size: 0.62rem; }
+  .nav-links { gap: 14px; }
 }

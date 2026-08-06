@@ -1470,10 +1470,15 @@ html[lang="en"] .ls-to-en { display: none; }
 
 .case-collage img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
   background: linear-gradient(135deg, var(--surface), var(--surface-light));
+}
+
+.case-collage .ch-hero {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 6.5;
 }
 
 .case-collage img.ph {
